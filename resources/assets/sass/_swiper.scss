@@ -1,0 +1,50 @@
+
+.swiper-container{
+  // width:50%;
+  height:$slider-height;
+  box-shadow: 0 4px 8px 0 rgba(7,17,27,.1);
+  //border-radius: 10px;
+  a span {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 15px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+  }
+}
+.cubeswiper-container
+{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+
+.cube{
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.scene-name{
+  font-size: 14px;
+  color: #4D555D;
+  line-height: 28px;
+  word-break: break-word;
+  text-align: center;
+  margin-top: 300px;
+}
+.swiper-pagination{
+  text-align: right;
+}
+
+.slider_image{
+  width: -webkit-fill-available;
+}
