@@ -68,7 +68,7 @@ $dark-red: grey !default;
 		.btn-red{
 			color: #fff;
 			background-color: $medium-red;
-			border-color: $medium-red;
+			border-color: $dark-red;
 			&:hover{
 				background-color: $dark-red;
 			}

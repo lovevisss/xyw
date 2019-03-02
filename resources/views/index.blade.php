@@ -10,7 +10,7 @@
 
 @section('body')
     <!-- new line -->
-    {{--@include('partials._slider')--}}
+    @include('partials._slider')
     {{--@include('blocks._news')--}}
     {{--@include('blocks._sidebar')--}}
     {{--<div class="clear" style="height: 40px"></div>--}}

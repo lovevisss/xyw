@@ -13,7 +13,7 @@ class SliderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('partials._slider', 'App\Http\Composer\SliderComposer');
     }
 
     /**
