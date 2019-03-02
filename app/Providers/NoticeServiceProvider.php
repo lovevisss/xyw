@@ -13,7 +13,7 @@ class NoticeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('blocks._notice', 'App\Http\Composer\NoticeComposer');
     }
 
     /**
