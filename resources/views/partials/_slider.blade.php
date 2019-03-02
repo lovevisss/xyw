@@ -1,3 +1,4 @@
+slder
 <div class="swiper-container col-sm-12">
     <div class="swiper-wrapper">
         @foreach($image_posts as $post)
