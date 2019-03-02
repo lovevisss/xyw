@@ -15,7 +15,7 @@
 <div class="container maincontent">
     @yield('body')
 </div>
-{{--@include('partials._foot')--}}
+@include('partials._footer')
 </body>
 
 {{Html::script('js/jquery-1.11.1.min.js')}}
