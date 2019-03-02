@@ -8,7 +8,7 @@
     height: $header-height;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;  //这里使用移入效果  需要去掉
     background: url(../images/headerJob.png) 780px 50% no-repeat;
     .leftLogo{
         float: left;
@@ -40,6 +40,10 @@
             .icon_01{
                 position: relative;
                 background: url(../images/head/wechat.png) no-repeat;
+            }
+            .icon_02{
+                position: relative;
+                background: url(../images/head/webo.png) no-repeat;
             }
         }
     }

@@ -18,6 +18,13 @@
                        </div>
                    </a>
                </li>
+                <li class="icon_item icon_02" id="icon_02">
+                    <a href="">
+                        <div id="qrcode" class="qrcode" style="display: none;">
+                            <img src="{{asset('images/head/webo_xyw.jpg')}}" alt="">
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
