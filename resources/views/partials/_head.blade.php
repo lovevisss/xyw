@@ -7,13 +7,14 @@
 
 
 
-
-            <a href="{{route('index')}}" title="联系我们" class="current">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" title="企业入口">企业入口</a>
+            <div>
+                <a href="{{route('index')}}" title="联系我们" class="current">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" title="企业入口">企业入口</a>
+            </div>
             <ul class="linkIcon">
                <li class="icon_item icon_01" id="icon_01">
                    <a href="">
                        <div id="qrcode" class="qrcode" style="display: none;">
-                           <img src="" alt="">
+                           <img src="{{asset('images/head/wechat_xyw.jpg')}}" alt="">
                        </div>
                    </a>
                </li>
