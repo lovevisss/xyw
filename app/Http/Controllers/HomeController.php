@@ -27,4 +27,9 @@ class HomeController extends Controller
         $parent_menu = MenuItem::where('id', '=', 15)->first();
         return view('index', compact('parent_menu'));
     }
+
+    public function get_category($id)
+    {
+        return $id;
+    }
 }

@@ -28,3 +28,5 @@ Route::post('search', ['as' => 'search', function(){
     return $keys;
 //    return redirect(route('search_get',['keys' => $keys]));  //post 第二页会出问题  需要改成get
 }]);
+
+Route::get('category/{id}', ['as' => 'category', 'uses' => 'HomeController@get_category']);
