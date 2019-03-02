@@ -48,19 +48,19 @@
         $("#icon_01").hoverDelay({
             hoverDuring: 300,
             hoverEvent: function(){
-                $(".qrcode").show(500);
+                $("#icon_01.qrcode").show(500);
             },
             outEvent: function(){
-                $(".qrcode").hide(500);
+                $("#icon_01.qrcode").hide(500);
             }
         });
         $("#icon_02").hoverDelay({
             hoverDuring: 300,
             hoverEvent: function(){
-                $(".qrcode").show(500);
+                $("#icon_02.qrcode").show(500);
             },
             outEvent: function(){
-                $(".qrcode").hide(500);
+                $("#icon_02.qrcode").hide(500);
             }
         });
     </script>
