@@ -21,3 +21,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
+Route::post('search', ['as' => 'search', function(){
+    $keys = Input::get('keys');
+    return $keys;
+//    return redirect(route('search_get',['keys' => $keys]));  //post 第二页会出问题  需要改成get
+}]);
