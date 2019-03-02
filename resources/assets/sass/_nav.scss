@@ -65,5 +65,13 @@ $dark-red: grey !default;
 	width: 119px;
 	.input-group{
 		margin-top: 5px;
+		.btn-red{
+			color: #fff;
+			background-color: $medium-red;
+			border-color: $medium-red;
+			&:hover{
+				background-color: $dark-red;
+			}
+		}
 	}
 }
