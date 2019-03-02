@@ -8,7 +8,7 @@
 
 
             <div>
-                <a href="{{route('index')}}" title="联系我们" class="current">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" title="企业入口">企业入口</a>
+                <a href="http://www.zufedfc.edu.cn" title="学院首页" class="current">学院首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" title="校友Q群">校友Q群</a>
             </div>
             <ul class="linkIcon">
                <li class="icon_item icon_01" id="icon_01">

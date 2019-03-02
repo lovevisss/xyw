@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $parent_menu = MenuItem::where('id', '=', 15)->first();
+        return view('index', compact('parent_menu'));
     }
 }
