@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'index', function () {
     return view('index');
-});
+}]);
 
 Auth::routes();
 
