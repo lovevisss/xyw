@@ -10,7 +10,21 @@
     position: relative;
     overflow: hidden;
     background: url(../images/headerJob.png) 780px 50% no-repeat;
+    .leftLogo{
+        float: left;
+    }
+    .rightHead{
+        float: right;
+        margin-top: 8px;
+        color: #fff;
+
+        a{
+            color: #fff;
+        }
+    }
 }
+
+
 .header_logo{
 	margin-top:33px;
 }
