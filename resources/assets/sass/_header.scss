@@ -15,11 +15,31 @@
     }
     .rightHead{
         float: right;
-        margin-top: 8px;
+        margin-top: 50px;
         color: #fff;
 
         a{
             color: #fff;
+        }
+
+        .linkIcon{
+            float: right;
+            .icon_item{
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                margin: 14px 8px 0 0;
+                .qrcode{
+                    display: none;
+                    top: 42px;
+                    left: -75px;
+                    position: absolute;
+                    z-index: 20;
+                }
+            }
+            .icon_01{
+                background: url(../images/head/wechat_xyw.jpg) no-repeat;
+            }
         }
     }
 }

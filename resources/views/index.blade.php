@@ -29,6 +29,7 @@
 @section('script')
     {{Html::script('js/swiper/swiper.min.js')}}
     {{Html::script('js/embed_index.js')}}
+    {{Html::script('js/hoverdelay.js')}}
     <script type="text/javascript">
         var mySwiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
@@ -42,8 +43,17 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-        })
+        });
 
+        $("#icon_01").hoverDelay({
+            hoverDuring: 300,
+            hoverEvent: function(){
+                $(".qrcode").show(500);
+            },
+            outEvent: function(){
+                $(".qrcode").hide(500);
+            }
+        });
 
     </script>
 
