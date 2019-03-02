@@ -8,9 +8,12 @@
     {{env('APP_NAME', '浙江财经大学|校友网')}}
 @endsection
 
+@section('slider')
+    @include('partials._slider')
+@endsection
+
 @section('body')
     <!-- new line -->
-    @include('partials._slider')
     {{--@include('blocks._news')--}}
     {{--@include('blocks._sidebar')--}}
     {{--<div class="clear" style="height: 40px"></div>--}}
