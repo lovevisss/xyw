@@ -25,6 +25,11 @@
                         </div>
                     </a>
                 </li>
+                <li class="icon_item icon_03" id="icon_03">
+                    <a href="mailto:alumni@zufedfc.edu.cn">
+
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
