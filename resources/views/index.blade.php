@@ -94,7 +94,7 @@
                             //设置列表第一个元素高度0，透明度为0，并消失
                             height : 0,
                             opacity : 0,
-                            display : 'none'
+                            display : 'block'
                         }).appendTo($list);//appendTo() 方法在被选元素的后面（仍位于内部）插入指定内容。
                         $list.find('> li:first').animate({ opacity : 0,height : 0}, 1000, function () {
                             $(this).remove();
