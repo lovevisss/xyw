@@ -3,9 +3,10 @@
 namespace App\Imports;
 
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Carbon\Carbon;
 use TCG\Voyager\Models\Post;
-class PostImport implements ToModel
+class PostImport implements ToModel, WithHeadingRow
 {
     /**
     * @param array $row
