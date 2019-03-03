@@ -47,7 +47,7 @@ Route::get('newxls', function ()
 
 
 Route::get('xlstest', function(){
-    \Excel::load('public/xls/mxxw.csv', function($reader){
+    \Excel::load('public/xls/core_content.csv', function($reader){
         $data = $reader->all();
         foreach($data as $item)
         {
