@@ -38,9 +38,10 @@ Route::get('xlstest', function(){
         $data = $reader->all();
         foreach($data as $item)
         {
-            echo $item->id;
+            echo $item->id."\n";
             if($item->categoryid == 556)  //母校新闻
             {
+                echo '556';
                 if(! TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first())
                 {
                     if($item->contentfull != null)
