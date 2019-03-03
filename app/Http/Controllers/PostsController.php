@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use TCG\Voyager\Models\Post;
 class PostsController extends Controller
 {
     public function show($id)

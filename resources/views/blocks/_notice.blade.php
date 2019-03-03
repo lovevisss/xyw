@@ -17,7 +17,7 @@
     @foreach($notice_posts as $new)
 
         <li class="">
-
+            <a href="{{route('post', $new->id)}}">
                 <img src="storage/{{$new->image}}" alt="" class="col-sm-6">
 
                 <span class="fbody col-sm-6">
@@ -26,7 +26,7 @@
                     <p style="color:grey; text-indent: 1em">时间:[{{date_format($new->created_at,"Y-m-d")}}] &nbsp;&nbsp;&nbsp;作者:{{$new->author ? $new->author->name : 'admin'}}</p>
                     <p style="text-indent: 2em;">{{App\Helper\StringHelper::substrtitle(str_replace("&nbsp;","",strip_tags($new->body)),45) }} </p>
                 </span>
-
-            </li>
+            </a>
+        </li>
     @endforeach
 @stop
