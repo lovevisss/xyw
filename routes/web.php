@@ -58,7 +58,6 @@ Route::get('xlstest', function(){
 
                 }
                 echo $item->contenttitle;
-                echo $item->contentfull;
             }
         }
 //       dd($data);
