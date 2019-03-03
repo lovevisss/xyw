@@ -23,6 +23,11 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 
+Route::get('page/{id}', ['as' => 'page', 'uses' => 'PagesController@show']);
+Route::get('post/{id}', ['as' => 'post', 'uses' => 'PostsController@show']);
+
+
+
 Route::post('search', ['as' => 'search', function(){
     $keys = Input::get('keys');
     return $keys;
