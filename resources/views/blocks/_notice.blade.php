@@ -3,7 +3,7 @@
 
 @section('outerclass')
     col-sm-7 bg-blur
-@stop
+@endsection
 
 @section('title_name')
     {{$notice_posts[0]->category->name}}

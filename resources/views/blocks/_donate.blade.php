@@ -2,7 +2,7 @@
 
 @section('outerclass')
     col-sm-3  small_list
-@stop
+@endsection
 
 @section('title')
     {{$donate_posts[0]->category->name}}
