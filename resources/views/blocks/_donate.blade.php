@@ -7,6 +7,7 @@
 @section('title')
     {{$donate_posts[0]->category->name}}
 @stop
+
 @section('link')
     {{route('category', ['id' => 1])}}
 @endsection
