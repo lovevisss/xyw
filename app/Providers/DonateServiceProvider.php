@@ -13,7 +13,7 @@ class DonateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('partials._donate', 'App\Http\Composer\DonateComposer');
+        view()->composer('blocks._donate', 'App\Http\Composer\DonateComposer');
     }
 
     /**
