@@ -9,7 +9,7 @@
     {{Html::style('css/style.css')}}
     <style type="text/css">
         #sidebar{ height;500px; overflow:hidden; margin:0 auto; background:#f00; color:#fff;}
-        #marquee li{height:20px; line-height:20px;}
+        #marquee li{height:30px; line-height:30px;}
     </style>
 </head>
 <body>
