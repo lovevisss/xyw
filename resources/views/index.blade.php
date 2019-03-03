@@ -67,50 +67,31 @@
                 $("#icon_02 .qrcode").hide(500);
             }
         });
-        $(function () {
-            $('ul.spy').simpleSpy();
-        });
-        (function ($) {
-            $.fn.simpleSpy = function (limit, interval) {
-                limit = limit || 12;//展示数量
-                interval = interval || 4000;
-                return this.each(function () {
-                    var $list = $(this),//将当前对象传给$list
-                        items = [],
-                        currentItem = 0,
-                        total = 0,
-                        height = $list.find('> li:first').height();//20
 
-                    $list.find('> li').each(function () {
-                        items.push('<li>' + $(this).html() + '</li>');
-                        //将所有的元素导进去，放到数组items
-                    });
-                    total = items.length;//获取所有li元素长度
-                    $list.wrap('<div class="spyWrapper" />').parent().css({ height : height * limit });
-                    //用<div class="spyWrapper" />包裹元素，并设置高度
-                    $list.find('> li').filter(':gt('+(limit-1)+')').remove();//移除最后一个元素
-                    function spy() {
-                        var $insert = $(items[currentItem]).css({
-                            //设置列表第一个元素高度0，透明度为0，并消失
-                            height : 0,
-                            opacity : 0,
-                            display : 'none'
-                        }).appendTo($list);//appendTo() 方法在被选元素的后面（仍位于内部）插入指定内容。
-                        $list.find('> li:first').animate({ opacity : 0,height : 0}, 1000, function () {
-                            $(this).remove();
-                            $insert.animate({ height : height }, 1000).animate({ opacity : 1 }, 1000);
-                        });
-                        currentItem++;
-                        if (currentItem >= total) {
-                            currentItem = 0;
-                        }
-                        setTimeout(spy, interval);
-                    }
-                    spy();
-                });
-            };
-
-        })(jQuery);
+        var area = document.getElementById('moocBox');
+        var iliHeight = 24;//单行滚动的高度
+        var speed = 50;//滚动的速度
+        var time;
+        var delay= 2000;//设置延迟执行时间
+        area.scrollTop=0;
+        area.innerHTML+=area.innerHTML;//克隆一份一样的内容
+        function startScroll(){
+            time=setInterval("scrollUp()",speed);
+            area.scrollTop++;
+        }
+        function scrollUp(){
+            if(area.scrollTop % iliHeight==0){
+                //如果当前滚动高度为单行高度的倍数
+                clearInterval(time);
+                setTimeout(startScroll,delay);//延迟执行2000毫秒
+            }else{
+                area.scrollTop++;
+                if(area.scrollTop >= area.scrollHeight/2){
+                    area.scrollTop =0;
+                }
+            }
+        }
+        setTimeout(startScroll,delay);
 
 
 
