@@ -41,11 +41,13 @@ Route::get('xlstest', function(){
             echo $item->id."\n";
             if($item->categoryid == 556)  //母校新闻
             {
-                echo '556';
+                echo '556'."\n";
                 if(! TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first())
                 {
+                    echo 'not exit'."\n";
                     if($item->contentfull != null)
                     {
+                        echo 'creating'."\n";
                         DB::table('posts')->insert([
                             'author_id' => 1,
                             'category_id' => 1,
