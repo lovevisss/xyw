@@ -16,7 +16,7 @@
 @section('list')
     @foreach($notice_posts as $new)
 
-        <li class="">
+        <li class="large-li">
             <a href="{{route('post', $new->id)}}">
                 <img src="storage/{{$new->image}}" alt="" class="col-sm-6">
 

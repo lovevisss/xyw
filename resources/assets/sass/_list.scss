@@ -186,6 +186,14 @@
 .in_newsList{
 	margin-top: 10px;
 
+	.large-li{
+		list-style: none;
+		margin: 0px 10px 30px 0px;
+		overflow: hidden;
+		position: relative;
+		min-height: 70px;
+	}
+
 	.new_info{
 		color: white;
 		font-weight: bold;
@@ -200,16 +208,13 @@
 	ul{
 		overflow: hidden;
 		li{
-			//height: 36px;
-			//line-height: 36px;
-			//margin-top: -1px;
-			//border-top: 1px dashed #f1f1f1;
-			//display: block;
-			list-style: none;
-			margin: 0px 10px 30px 0px;
-			overflow: hidden;
-			position: relative;
-			min-height: 70px;
+			height: 36px;
+			line-height: 36px;
+			margin-top: -1px;
+			border-top: 1px dashed #f1f1f1;
+			display: block;
+
+
 			a{
 				font-size: 14px;
 				display: block;
