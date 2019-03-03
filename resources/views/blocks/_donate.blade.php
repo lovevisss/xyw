@@ -5,7 +5,7 @@
         <a href="{{route('category', ['id' => 1])}}" class="in_titleMore">更多<i class="glyphicon glyphicon-chevron-right"></i></a>
     </div>
     <div class="in_newsList">
-        <ul id="count">
+        <ul id="marquee" class="marquee spy">
             @foreach($donate_posts as $new)
                 <li>
                     <a href="post/{{$new->id}}" title="{{$new->title}}">
