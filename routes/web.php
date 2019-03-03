@@ -34,7 +34,7 @@ Route::get('category/{id}', ['as' => 'category', 'uses' => 'HomeController@get_c
 
 
 Route::get('xlstest', function(){
-    \Excel::load('public/xls/corecontent.csv', function($reader){
+    \Excel::load('public/xls/core_content.csv', function($reader){
         $data = $reader->all();
         foreach($data as $item)
         {
