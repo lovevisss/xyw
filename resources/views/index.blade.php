@@ -16,6 +16,10 @@
     <!-- new line -->
     @include('blocks._notice')
     @include('blocks._donate')
+    <div class="col-sm-12">
+
+        <img src="{{asset('images/xiaoqing.jpg')}}" alt="">
+    </div>
     {{--@include('blocks._sidebar')--}}
     {{--<div class="clear" style="height: 40px"></div>--}}
     {{--<!-- new line -->--}}
