@@ -59,7 +59,7 @@ Route::get('xlstest', function(){
                         echo 'creating'."\n";
                         DB::table('posts')->insert([
                             'author_id' => 1,
-                            'category_id' => 2,
+                            'category_id' => 1,
                             'title' => $item->contenttitle,
                             'body'       => $item->contentfull,
                             'slug' => $item->id,
