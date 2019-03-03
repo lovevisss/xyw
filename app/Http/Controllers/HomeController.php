@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\MenuItem;
 use TCG\Voyager\Models\Post;
+use TCG\Voyager\Models\Category;
 class HomeController extends Controller
 {
     /**
@@ -33,6 +34,13 @@ class HomeController extends Controller
 
     public function get_category($id)
     {
-        return $id;
+        $category = Category::where('id', '=', $id)->first();
+        $title = $category->name;
+        $menu = MenuItem::where('title' , '=', $title)->first();
+        $menus = MenuItem::where('parent_id', '=', $menu->parent_id)->get();
+        // dd($menus);
+        $parent_menu = MenuItem::where('id', '=', $menu->parent_id)->first();
+        $posts = Post::where('category_id', '=', $id)->orderBy('created_at', 'DESC')->paginate(15);
+        return view('posts.list', compact('category', 'posts', 'title', 'menus', 'parent_menu'));
     }
 }

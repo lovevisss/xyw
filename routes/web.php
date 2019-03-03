@@ -27,6 +27,7 @@ Route::get('page/{id}', ['as' => 'page', 'uses' => 'PagesController@show']);
 Route::get('post/{id}', ['as' => 'post', 'uses' => 'PostsController@show']);
 
 
+Route::get('category/{id}', ['as' => 'category', 'uses' => 'HomeController@get_category']);
 
 Route::post('search', ['as' => 'search', function(){
     $keys = Input::get('keys');
@@ -34,7 +35,6 @@ Route::post('search', ['as' => 'search', function(){
 //    return redirect(route('search_get',['keys' => $keys]));  //post 第二页会出问题  需要改成get
 }]);
 
-Route::get('category/{id}', ['as' => 'category', 'uses' => 'HomeController@get_category']);
 
 
 
