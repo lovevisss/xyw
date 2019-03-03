@@ -20,7 +20,12 @@
 
                 <img src="storage/{{$new->image}}" alt="" class="col-sm-6">
 
-                <span class="fbody col-sm-6"><p>{{App\Helper\StringHelper::substrtitle(str_replace("&nbsp;","",strip_tags($new->body)),45) }} </p></span>
+                <span class="fbody col-sm-6" st>
+                    <p style="font-weight: bold">{{$new->title}}</p>
+                    <hr>
+                    <p style="color:grey">{{date_format($new->created_at,"m-d")}}</p>
+                    <p>{{App\Helper\StringHelper::substrtitle(str_replace("&nbsp;","",strip_tags($new->body)),45) }} </p>
+                </span>
 
             </li>
     @endforeach
