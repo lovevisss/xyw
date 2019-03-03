@@ -2,6 +2,10 @@
 	@include white_round_block(5, 0.8);
 	padding: 0 20px;
 	margin: 0 45px;
+	li{
+		margin: 0px 0px 5px 0px;
+		min-height: 0px;
+	}
 }
 
 .list_witch_pic{

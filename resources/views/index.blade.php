@@ -67,6 +67,70 @@
                 $("#icon_02 .qrcode").hide(500);
             }
         });
+        function scroll(lh,speed,delay,id){
+            var box = document.getElementById(id);
+            var _l = box.getElementsByTagName('li').length;
+            var height = lh * _l;
+            var t = null;
+            var _t = null;
+            var num = 0;
+            var flag = 0;
+            var _topflag = 0;
+            if(height <= lh){
+                return false;
+            }else{
+                auto();
+            }
+            function topdelay(){
+                var _t1 = setTimeout(function(){
+                    _topflag = 1;
+                },delay);
+            }
+
+            function delay_time(){
+                if(num < delay){
+                    _t = setInterval(function(){
+                        num++;
+                        if(num == delay/1000){
+                            window.clearInterval(_t);
+                            flag = 0;
+                            if(box.scrollTop >= height-lh){
+                                topdelay();
+                                if(_topflag){
+                                    box.scrollTop = 0;
+                                    _topflag = 0;
+                                }
+
+                            }
+                            auto();
+                        }
+                    },1000);
+                }
+            }
+            function auto(){
+                if(flag == 0){
+                    var i = 0;
+                    var s = setInterval(function(){
+                        i++;
+                        if(i == delay/1000){
+                            t = setInterval(function(){
+                                box.scrollTop += 2;
+                                if(box.scrollTop % lh == 0){
+                                    window.clearInterval(t);
+                                    flag = 1;
+                                    num = 0;
+                                    delay_time();
+                                }
+                            },speed);
+                        }
+                    },1000);
+                }
+            }
+        }
+        scroll(34,50,1000,'count');
+
+
+
     </script>
 
 @endsection
