@@ -42,6 +42,7 @@ Route::get('xlstest', function(){
             if($item->categoryid == 556)  //母校新闻
             {
                 echo '556'."\n";
+                echo TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first();
                 if(! TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first())
                 {
                     echo 'not exit'."\n";
