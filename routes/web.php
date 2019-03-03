@@ -63,8 +63,8 @@ Route::get('xlstest', function(){
                             'title' => $item->contenttitle,
                             'body'       => $item->contentfull,
                             'slug' => $item->id,
-                            'created_at' => \Carbon\Carbon::createFromTimestamp($item->publishtime),
-                            'updated_at' => \Carbon\Carbon::createFromTimestamp($item->publishtime),
+                            'created_at' => \Carbon\Carbon::createFromTimestamp($item->createtime),
+                            'updated_at' => \Carbon\Carbon::createFromTimestamp($item->createtime),
                         ]);
 
                     }
