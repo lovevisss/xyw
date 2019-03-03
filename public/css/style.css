@@ -329,6 +329,10 @@ a:hover {
   padding: 0 20px;
   margin: 0 45px;
 }
+.small_list .in_newsList li, .small_list .in_noticeList li {
+  margin: 0px 0px 5px 0px;
+  min-height: 0px;
+}
 
 .list_witch_pic {
   height: 400px;
@@ -386,6 +390,15 @@ a:hover {
   padding: 0 15px;
   margin: 5px 0;
   overflow: hidden;
+}
+.in_noticeList ul li {
+  height: 36px;
+  line-height: 36px;
+  margin-top: -1px;
+  border-top: 1px dashed #f1f1f1;
+  display: block;
+  margin: 0 0 !important;
+  min-height: 0px !important;
 }
 
 .in_noticeMore {
@@ -455,6 +468,57 @@ a:hover {
   transform: scale(1.04, 1.04);
 }
 
+.post-month, .post-newmonth, .post-day, .post-newday {
+  text-align: center;
+  display: block;
+  width: 60px;
+  color: #fff;
+  font-family: Arial,Times,serif;
+  font-weight: normal;
+  left: 0;
+  position: absolute;
+}
+
+.post-newday {
+  background: #85cffc;
+  height: 45px;
+  line-height: 44px;
+  font-size: 26px;
+}
+
+.post-newmonth {
+  background: #50b5f9;
+  height: 25px;
+  line-height: 25px;
+  top: 45px;
+  font-size: 13px;
+}
+
+.ftitle {
+  display: inline-block;
+  margin-left: 80px;
+  font-size: 16px;
+  padding: 1px 0 0 0;
+  font-family: "Microsoft YaHei",arial;
+  float: left;
+}
+
+.fbody {
+  display: inline-block;
+  float: right;
+  line-height: 24px;
+  font-size: 14px;
+  color: #999;
+  padding: 3px 0 0 0;
+  float: left;
+}
+.fbody hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px dashed #b3bac2;
+}
+
 .in_newsList, .in_noticeList {
   margin-top: 10px;
 }
@@ -473,11 +537,11 @@ a:hover {
   overflow: hidden;
 }
 .in_newsList ul li, .in_noticeList ul li {
-  height: 36px;
-  line-height: 36px;
-  margin-top: -1px;
-  border-top: 1px dashed #f1f1f1;
-  display: block;
+  list-style: none;
+  margin: 0px 10px 30px 0px;
+  overflow: hidden;
+  position: relative;
+  min-height: 70px;
 }
 .in_newsList ul li a, .in_noticeList ul li a {
   font-size: 14px;
