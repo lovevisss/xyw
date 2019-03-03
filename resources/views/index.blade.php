@@ -15,7 +15,7 @@
 @section('body')
     <!-- new line -->
     @include('blocks._notice')
-    {{--@include('blocks._news')--}}
+    @include('blocks._donate')
     {{--@include('blocks._sidebar')--}}
     {{--<div class="clear" style="height: 40px"></div>--}}
     {{--<!-- new line -->--}}
