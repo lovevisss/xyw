@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $parent_menu = MenuItem::where('id', '=', 15)->first();
         $info = Post::with('category')->where('category_id', '=', 1)->orderBy('created_at', 'DESC')->take(9)->get();
-        $student_info = TCG\Voyager\Models\Post::with('category')->where('category_id', '=', 31)->orderBy('created_at', 'DESC')->take(9)->get();
+        $student_info = Post::with('category')->where('category_id', '=', 31)->orderBy('created_at', 'DESC')->take(9)->get();
 
         return view('index', compact('parent_menu','info'));
     }
