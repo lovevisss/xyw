@@ -33,6 +33,14 @@ Route::get('category/{id}', ['as' => 'category', 'uses' => 'HomeController@get_c
 
 
 
+Route::get('newxls', function ()
+{
+    \Excel::import(new UsersImport, 'public/xls/core_content.csv');
+
+    return redirect('/')->with('success', 'All good!');
+});
+
+
 Route::get('xlstest', function(){
     \Excel::load('public/xls/core_content.csv', function($reader){
         $data = $reader->all();
