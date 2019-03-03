@@ -52,7 +52,7 @@ Route::get('xlstest', function(){
         foreach($data as $item)
         {
             echo $item->id."\n";
-            if($item->categoryid == 556)  //母校新闻
+            if($item->categoryid == 655)  //母校新闻
             {
                 echo $item->contenttitle."\n";
 //                echo TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first();
@@ -64,7 +64,7 @@ Route::get('xlstest', function(){
                         echo 'creating'."\n";
                         DB::table('posts')->insert([
                             'author_id' => 1,
-                            'category_id' => 1,
+                            'category_id' => 2,
                             'title' => $item->contenttitle,
                             'body'       => $item->contentfull,
                             'slug' => $item->id,

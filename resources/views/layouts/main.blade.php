@@ -8,9 +8,8 @@
     {{Html::style('css/normalize.css')}}
     {{Html::style('css/style.css')}}
     <style type="text/css">
-        #sidebar{width:200px; height;500px; overflow:hidden; margin:0 auto; background:#f00; color:#fff;}
-        #marquee{width:200px;}
-        #marquee li{width:200px;height:20px; line-height:20px;}
+        #sidebar{ height;500px; overflow:hidden; margin:0 auto; background:#f00; color:#fff;}
+        #marquee li{height:20px; line-height:20px;}
     </style>
 </head>
 <body>

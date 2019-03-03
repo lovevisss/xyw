@@ -1,3 +1,5 @@
+
+<div class="clear" style="height:40px;"></div>
 <div class="footer_w">
     <div class="footer clearfix">
         <a href="{{route('index')}}" class="footerLogo"><img src="{{asset('images/logo_footer.png')}}" width="280" height="62" alt=""></a>
