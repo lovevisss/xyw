@@ -17,14 +17,11 @@
     @foreach($notice_posts as $new)
 
         <li class="">
-            <div class="col-sm-6">
 
-                <img src="storage/{{$new->image}}" alt="">
-            </div>
-            <div class="col-sm-6">
-                <span class="fbody"><p>{{App\Helper\StringHelper::substrtitle(str_replace("&nbsp;","",strip_tags($new->body)),45) }} </p></span>
+                <img src="storage/{{$new->image}}" alt="" class="col-sm-6">
 
-            </div>
+                <span class="fbody col-sm-6"><p>{{App\Helper\StringHelper::substrtitle(str_replace("&nbsp;","",strip_tags($new->body)),45) }} </p></span>
+
             </li>
     @endforeach
 @stop
