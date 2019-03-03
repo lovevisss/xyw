@@ -30,3 +30,37 @@ Route::post('search', ['as' => 'search', function(){
 }]);
 
 Route::get('category/{id}', ['as' => 'category', 'uses' => 'HomeController@get_category']);
+
+
+
+Route::get('xlstest', function(){
+    \Excel::load('public/xls/core_content.csv', function($reader){
+        $data = $reader->all();
+        foreach($data as $item)
+        {
+            if($item->categoryid == 556)  //母校新闻
+            {
+                if(! TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first())
+                {
+                    if($item->contentfull != null)
+                    {
+                        DB::table('posts')->insert([
+                            'author_id' => 1,
+                            'category_id' => 1,
+                            'title' => $item->contenttitle,
+                            'body'       => $item->contentfull,
+                            'slug' => $item->id,
+                            'created_at' => \Carbon\Carbon::createFromTimestamp($item->createtime),
+                            'updated_at' => \Carbon\Carbon::createFromTimestamp($item->createtime),
+                        ]);
+
+                    }
+
+                }
+                echo $item->contenttitle;
+                echo $item->contentfull;
+            }
+        }
+//       dd($data);
+    });
+});
