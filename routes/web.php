@@ -35,7 +35,7 @@ Route::get('category/{id}', ['as' => 'category', 'uses' => 'HomeController@get_c
 
 Route::get('newxls', function ()
 {
-    \Excel::import(new \App\Imports\PostImport, 'public/xls/mxxw.csv');
+    \Excel::import(new \App\Imports\PostImport, 'mxxw.csv');
 
     return redirect('/')->with('success', 'All good!');
 });
