@@ -14,7 +14,7 @@ use TCG\Voyager\Models\Post;
 class DonateComposer {
     public function compose(View $view)
     {
-        $view->with('donate_posts', Post::where('category_id',1)->orderBy('created_at', 'DESC')->take(7)->get());
+        $view->with('donate_posts', Post::where('category_id',2)->orderBy('created_at', 'DESC')->take(14)->get());
     }
 }
 

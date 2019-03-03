@@ -1,5 +1,5 @@
 .small_list{
-	@include white_round_block(5, 0.8);
+	@include white_round_block(5, 0.8, 510px);
 	padding: 0 20px;
 	margin: 0 45px;
 	.in_newsList{
