@@ -38,7 +38,7 @@ Route::get('xlstest', function(){
         $data = $reader->all();
         foreach($data as $item)
         {
-            echo $item->id."\n";
+            dd($item);
             if($item->categoryid == 556)  //母校新闻
             {
                 echo $item->contenttitle."\n";
