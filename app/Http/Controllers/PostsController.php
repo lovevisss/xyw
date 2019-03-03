@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
     public function show($id)
     {
-        $page = Page::where('id', '=', $id)->first();
+        $page = Post::where('id', '=', $id)->first();
         $title = $page->menu_name;
         $menu = MenuItem::where('title', $title)->first();
         $menus = MenuItem::where('parent_id', $menu->parent_id)->get();
