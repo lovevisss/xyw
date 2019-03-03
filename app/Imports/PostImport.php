@@ -2,9 +2,9 @@
 
 namespace App\Imports;
 
-use App\Post;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Carbon\Carbon;
+use TCG\Voyager\Models\Post;
 class PostImport implements ToModel
 {
     /**
