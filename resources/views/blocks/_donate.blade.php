@@ -1,9 +1,12 @@
-@extends('partials._partList')
+@extends('layouts.partlist')
 
 @section('outerclass')
     col-sm-3  small_list
 @stop
 
+@section('title')
+    {{$donate_posts[0]->category->name}}
+@stop
 @section('link')
     {{route('category', ['id' => 1])}}
 @endsection
