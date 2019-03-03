@@ -17,7 +17,7 @@
     @foreach($notice_posts as $new)
 
         <li class="">
-            <img src="{{$new->image}}" alt="">
+            <img src="storage/{{$new->image}}" alt="">
             <span class="fbody"><p>{{App\Helper\StringHelper::substrtitle(str_replace("&nbsp;","",strip_tags($new->body)),45) }} </p></span>
         </li>
     @endforeach
