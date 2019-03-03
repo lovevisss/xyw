@@ -23,7 +23,7 @@
                 <span class="fbody col-sm-6">
                     <p style="font-weight: bold; color:black;">{{$new->title}}</p>
                     <hr>
-                    <p style="color:grey">时间:{{date_format($new->created_at,"Y-m-d")}}  作者:{{$new->author ? $new->author->name : 'admin'}}</p>
+                    <p style="color:grey">时间:[{{date_format($new->created_at,"Y-m-d")}}]     作者:{{$new->author ? $new->author->name : 'admin'}}</p>
                     <p style="text-indent: 2em;">{{App\Helper\StringHelper::substrtitle(str_replace("&nbsp;","",strip_tags($new->body)),45) }} </p>
                 </span>
 
