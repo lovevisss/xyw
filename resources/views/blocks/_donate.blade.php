@@ -9,7 +9,7 @@
 @endsection
 
 @section('list')
-    @foreach($notice_posts as $new)
+    @foreach($donate_posts as $new)
         <li>
             <a href="post/{{$new->id}}" title="{{$new->title}}">
                 <i class="glyphicon glyphicon-triangle-right"></i>
