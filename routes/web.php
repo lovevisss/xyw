@@ -42,12 +42,12 @@ Route::get('newxls', function ()
 
 
 Route::get('xlstest', function(){
-    \Excel::load('public/xls/core_content.csv', function($reader){
+    \Excel::load('public/xls/mxxw.csv', function($reader){
         $data = $reader->all();
         foreach($data as $item)
         {
             echo $item->id."\n";
-            if($item->categoryid == 655)  //母校新闻
+            if($item->categoryid == 556)  //母校新闻
             {
                 echo $item->contenttitle."\n";
 //                echo TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first();
