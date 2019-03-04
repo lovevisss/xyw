@@ -15,7 +15,7 @@
 
 
     </ul>
-    {{--@include('partials._contact')--}}
+    @include('partials._contact')
 
 
 </div>
