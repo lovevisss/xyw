@@ -25,6 +25,7 @@
 
 .contact_list{
 	@include white_round_block(5, 0.8, 200px);
+	background: #fff;
 	//float: right;
 	margin-top: 90px;
 	.contactInfo{
@@ -45,6 +46,7 @@
 	text-indent: 2em;
 	margin: 0 0;
 	background: $dark-red 0 0 repeat;
+	border-radius: 5px;
 }
 
 .in_noticeList{
