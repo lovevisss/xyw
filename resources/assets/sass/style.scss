@@ -13,7 +13,7 @@
 
 @mixin white_round_block($radius, $transition, $height: $list-height){
 	height: $height;
-	background: #fff;
+	//background: #fff;
 	border-radius: $radius + px;
     @include transitions($transition);
 }
@@ -161,6 +161,12 @@ a{
 		}
 	}
 	
+}
+
+.pic-center{
+	width: 1014px;
+	margin-left: 16px;
+	border: 1px solid #8e1c26;
 }
 
 .paginate{

@@ -18,7 +18,7 @@
     @include('blocks._donate')
     <div class="col-sm-12">
 
-        <img src="{{asset('images/xiaoqing.jpg')}}" alt="">
+        <img src="{{asset('images/xiaoqing.jpg')}}" alt="" class="pic-center">
     </div>
     @include('blocks._info')
     {{--@include('blocks._sidebar')--}}
