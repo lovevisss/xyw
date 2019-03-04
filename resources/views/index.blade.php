@@ -33,8 +33,8 @@
     {{--<div class="clear" style="height: 40px"></div>--}}
     {{--@include('blocks._piclink')--}}
     {{--@include('blocks._search_contact')--}}
-    {{--<div class="clear" style="height: 40px"></div>--}}
-    {{--@include('blocks._friendlink')--}}
+    <div class="clear" style="height: 40px"></div>
+    @include('blocks._friendlink')
 @endsection
 
 @section('script')
