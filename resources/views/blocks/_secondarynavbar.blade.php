@@ -17,5 +17,6 @@
     </ul>
     @include('partials._contact')
 
+    @include('partials._iconLink')
 
 </div>
