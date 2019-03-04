@@ -21,10 +21,10 @@
         <img src="{{asset('images/xiaoqing.jpg')}}" alt="" class="pic-center">
     </div>
     @include('blocks._info')
+    @include('blocks._recent')
     {{--@include('blocks._sidebar')--}}
     {{--<div class="clear" style="height: 40px"></div>--}}
     {{--<!-- new line -->--}}
-    {{--@include('blocks._jobs')--}}
     {{--@include('blocks._recommends')--}}
     {{--@include('blocks._recruits')--}}
     {{--<!-- new line -->--}}
