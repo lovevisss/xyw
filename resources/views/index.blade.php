@@ -18,7 +18,7 @@
     @include('blocks._donate')
     <div class="col-sm-12">
 
-        <img src="{{asset('images/xiaoqing.jpg')}}" alt="" class="pic-center">
+        <a href="{{route('category',5)}}"><img src="{{asset('images/xiaoqing.jpg')}}" alt="" class="pic-center"></a>
     </div>
     @include('blocks._info')
     @include('blocks._recent')
