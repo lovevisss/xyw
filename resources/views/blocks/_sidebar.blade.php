@@ -6,7 +6,7 @@
         <span class="in_titleLine"></span>
         <a href="{{route('category',5)}}" class="in_titleMore" style="padding-right: 35px; ">更多<i class="glyphicon glyphicon-chevron-right"></i></a>
     </div>
-    <iframe src="//player.bilibili.com/player.html?aid=51533549&cid=90202808&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe src="//player.bilibili.com/player.html?aid=51533549&cid=90202808&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="230px" height="128px"> </iframe>
     @include('partials._iconLink')
 
 </div>
