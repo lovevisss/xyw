@@ -38,46 +38,48 @@ Route::post('search', ['as' => 'search', function(){
 
 
 
-Route::get('newxls', function ()
-{
-    \Excel::import(new \App\Imports\PostImport, 'mxxw.csv');
-
-    return redirect('/')->with('success', 'All good!');
-});
 
 
-Route::get('xlstest', function(){
-    \Excel::load('public/xls/core_content.csv', function($reader){
-        $data = $reader->all();
-        foreach($data as $item)
-        {
-            echo $item->id."\n";
-            if($item->categoryid == 680)  //母校新闻
-            {
-                echo $item->contenttitle."\n";
-//                echo TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first();
-                if(! TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first())
-                {
-                    echo 'not exit'."\n";
-                    if($item->contentfull != null)
-                    {
-                        echo 'creating'."\n";
-                        DB::table('posts')->insert([
-                            'author_id' => 1,
-                            'category_id' => 6,
-                            'title' => $item->contenttitle,
-                            'body'       => $item->contentfull,
-                            'slug' => $item->id,
-                            'created_at' => \Carbon\Carbon::createFromTimestamp($item->createtime ? $item->createtime : $item->addtime),
-                            'updated_at' => \Carbon\Carbon::createFromTimestamp($item->createtime ? $item->createtime : $item->addtime),
-                        ]);
-
-                    }
-
-                }
-//                echo $item->contenttitle;
-            }
-        }
-//       dd($data);
-    });
-});
+//Route::get('newxls', function ()
+//{
+//    \Excel::import(new \App\Imports\PostImport, 'mxxw.csv');
+//
+//    return redirect('/')->with('success', 'All good!');
+//});
+//
+//
+//Route::get('xlstest', function(){
+//    \Excel::load('public/xls/core_content.csv', function($reader){
+//        $data = $reader->all();
+//        foreach($data as $item)
+//        {
+//            echo $item->id."\n";
+//            if($item->categoryid == 680)  //母校新闻
+//            {
+//                echo $item->contenttitle."\n";
+////                echo TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first();
+//                if(! TCG\Voyager\Models\Post::where('title' ,'=', $item->contenttitle)->first())
+//                {
+//                    echo 'not exit'."\n";
+//                    if($item->contentfull != null)
+//                    {
+//                        echo 'creating'."\n";
+//                        DB::table('posts')->insert([
+//                            'author_id' => 1,
+//                            'category_id' => 6,
+//                            'title' => $item->contenttitle,
+//                            'body'       => $item->contentfull,
+//                            'slug' => $item->id,
+//                            'created_at' => \Carbon\Carbon::createFromTimestamp($item->createtime ? $item->createtime : $item->addtime),
+//                            'updated_at' => \Carbon\Carbon::createFromTimestamp($item->createtime ? $item->createtime : $item->addtime),
+//                        ]);
+//
+//                    }
+//
+//                }
+////                echo $item->contenttitle;
+//            }
+//        }
+////       dd($data);
+//    });
+//});
