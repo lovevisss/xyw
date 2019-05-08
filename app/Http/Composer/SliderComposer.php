@@ -13,7 +13,7 @@ use TCG\Voyager\Models\Post;
 class SliderComposer {
     public function compose(View $view)
     {
-        $view->with('image_posts', Post::where('image' , '!=', null)->orderBy('created_at', 'DESC')->take(3)->get());
+        $view->with('image_posts', Post::where('title' , '==', "校园风景")->get());
     }
 }
 
